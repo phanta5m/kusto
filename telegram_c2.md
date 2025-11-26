@@ -1,3 +1,5 @@
+## converted from Kusto to YARA-L
+
 ```yara
 rule suspicious_svchost_telegram_c2
 {
