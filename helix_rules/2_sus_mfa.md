@@ -3,7 +3,7 @@
 
 This rule replaces the noisy standalone "User registered security info" alert. It correlates the Entra ID audit event with the underlying sign-in telemetry, alerting only when the session registering the new MFA factor comes from an unmanaged and non-compliant device (typical of AiTM token replay from a residential proxy) or follows recent MFA failures.
 
-```
+```kusto
 // Point 2: Suspicious MFA Registration (Unmanaged Device or Post-Auth Failure)
 // Data Sources: AuditLogs, SigninLogs
 let lookback = 1h;
